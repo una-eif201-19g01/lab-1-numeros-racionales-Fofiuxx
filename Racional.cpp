@@ -2,9 +2,9 @@
 #include <cmath>
 #include"Racional.h"
 #include <string>
-#include <math.h>
 
 
+//LLamando Constructores
 Racional::Racional(){
 
 	setNum(0);
@@ -14,7 +14,7 @@ Racional::Racional(){
 
 Racional::Racional(int num, int deno) : num(num){}
 
-
+//Llamando los metodos y realizando los calculos 
 int Racional::calcularMCD(int n, int d) {
 	int resultado = 0;
 
@@ -103,17 +103,17 @@ void Racional::SimpliFraccion(Racional &fraccion) {
  }
 
 
- /*Racional Racional::ElevaFraccion( Racional fraccion) {
+ Racional Racional::ElevaFraccion( Racional fraccion) {
 	 Racional result;
 
-	 result.setNum( pow(getNum(), a));
+	 result.setNum( getNum() * getNum() );
 
-	 result.setDeno( pow(getDeno(), a));
+	 result.setDeno( getDeno() * getDeno());
 
 	 SimpliFraccion(result);
  
 	 return result;
- }*/
+ }
 
  Racional Racional::ElevaEquivalente(Racional fraccion) {
 
@@ -136,7 +136,7 @@ void Racional::SimpliFraccion(Racional &fraccion) {
 
 
  }
-
+ // Llamando String para mostrar por pantalla 
  std::string Racional::ObtenerString() {
 
 	 std::string result;
@@ -147,6 +147,7 @@ void Racional::SimpliFraccion(Racional &fraccion) {
  
  }
 
+ //Llamando get y set 
  int Racional::getNum() const {
 
 	 return num;

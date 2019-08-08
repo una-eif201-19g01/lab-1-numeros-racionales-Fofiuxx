@@ -4,19 +4,19 @@
 class Racional {
 
 private:
-	int a;
-	int num, deno;
+	//Atributos propios de la clase 
 
+	int num, deno;
 	static int calcularMCD(int n, int d);
 
 
 public:
-
+	//Constructores 
 	Racional();
 	Racional(int num, int deno);
-	Racional(int a);
 	
-
+	
+	//Metodos
 	static void SimpliFraccion(Racional& fraccion);
 	Racional SumaFraccion(Racional fraccion);
 	std::string ObtenerString();
@@ -26,6 +26,7 @@ public:
 	Racional ElevaFraccion( Racional fraccion);
 	Racional ElevaEquivalente(Racional fraccion);
 
+	//Metodos set y get
 	int getNum() const;
 
 	void setNum(int num);

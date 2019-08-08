@@ -4,11 +4,12 @@
 
 
 int main() {
-	
+	//Objetos para usar los metodos de la clase
 	Racional fraccionA(20, 8);
 	Racional fraccionB(10, 4);
 	Racional fraccionAux;
 
+	//Para mostrar por pantalla 
 	std::cout << "Simplificacion de la fraccion A: " << fraccionA.ObtenerString() << std::endl;
 	Racional::SimpliFraccion(fraccionA);
 	std::cout << "Resultado: " << fraccionA.ObtenerString() << std::endl;
@@ -37,13 +38,13 @@ int main() {
 	std::cout << "Resultado: " << fraccionA.ObtenerString() << " / " << fraccionB.ObtenerString() <<
 		" = " << fraccionAux.ObtenerString() << std::endl;
 	
-	/*std::cout << "\nElevacion de Fracciones " << std::endl;
+	std::cout << "\nElevacion de Fracciones " << std::endl;
 	fraccionAux = fraccionA.ElevaFraccion(fraccionB);
 	std::cout << "Resultado: " << fraccionA.ObtenerString() << " / " << fraccionB.ObtenerString() <<
-		" = " << fraccionAux.ObtenerString() << std::endl;*/
+		" = " << fraccionAux.ObtenerString() << std::endl;
 
 	std::cout << "\nElevacion Equivalente de Fracciones " << std::endl;
-	fraccionAux = fraccionA.SumaFraccion(fraccionB);
+	fraccionAux = fraccionA.ElevaEquivalente(fraccionB);
 	std::cout << "Resultado: " << fraccionA.ObtenerString() << " / " << fraccionB.ObtenerString() <<
 		" = " << fraccionAux.ObtenerString() << std::endl;
 
